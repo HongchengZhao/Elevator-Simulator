@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Elevator</title>
+	<link rel="stylesheet" href="css/temp.css">
+</head>
+<body onload="initialize()">
+	<header id="header" class="">
+		<h1>Elevator Scheduling</h1>
+	</header><!-- /header -->
+
+	<div class="container">
+
+		<div id="outside-pannels">
+			<!--
+			<ul class="outside-pannel">
+				<li><button class="current-state">
+					<div class="to_top"></div> 
+					<div class="to_bottom"></div>  
+				</button></li>
+				<li><span class="current-floor">0</span></li>
+				<li><button class="up">&uarr;</button></li>
+				<li><button class="down">&darr;</button></li>
+			</ul>
+			-->
+		</div>
+		
+		<div id="floors">
+			<div id="demo">
+				
+				<div class="elevator">
+					<svg height=471.418px id=Capa_1 style="enable-background:new 0 0 471.418 471.418"version=1.1 viewBox="0 0 471.418 471.418"width=471.418px x=0px xml:space=preserve xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink y=0px><g><g><polygon points="60.343,0 60.343,471.418 94.343,471.418 94.343,34 423.777,34 423.777,471.418 457.777,471.418 457.777,0"/><g><rect height=400.604 width=149.255 x=104.194 y=43.906 /><rect height=400.604 width=149.254 x=264.672 y=43.906 /></g><path d="M13.641,281.419h36.811v-91.362H13.641V281.419z M32.044,201.635l11.34,19.123h-22.68L32.044,201.635z M43.384,250.718 l-11.34,19.123l-11.34-19.123H43.384z"/></g></g></svg>
+				</div>
+				<div class="elevator">
+					<svg height=471.418px id=Capa_1 style="enable-background:new 0 0 471.418 471.418"version=1.1 viewBox="0 0 471.418 471.418"width=471.418px x=0px xml:space=preserve xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink y=0px><g><g><polygon points="60.343,0 60.343,471.418 94.343,471.418 94.343,34 423.777,34 423.777,471.418 457.777,471.418 457.777,0"/><g><rect height=400.604 width=149.255 x=104.194 y=43.906 /><rect height=400.604 width=149.254 x=264.672 y=43.906 /></g><path d="M13.641,281.419h36.811v-91.362H13.641V281.419z M32.044,201.635l11.34,19.123h-22.68L32.044,201.635z M43.384,250.718 l-11.34,19.123l-11.34-19.123H43.384z"/></g></g></svg>
+				</div>
+				<div class="elevator">
+					<svg height=471.418px id=Capa_1 style="enable-background:new 0 0 471.418 471.418"version=1.1 viewBox="0 0 471.418 471.418"width=471.418px x=0px xml:space=preserve xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink y=0px><g><g><polygon points="60.343,0 60.343,471.418 94.343,471.418 94.343,34 423.777,34 423.777,471.418 457.777,471.418 457.777,0"/><g><rect height=400.604 width=149.255 x=104.194 y=43.906 /><rect height=400.604 width=149.254 x=264.672 y=43.906 /></g><path d="M13.641,281.419h36.811v-91.362H13.641V281.419z M32.044,201.635l11.34,19.123h-22.68L32.044,201.635z M43.384,250.718 l-11.34,19.123l-11.34-19.123H43.384z"/></g></g></svg>
+				</div>
+				<div class="elevator">
+					<svg height=471.418px id=Capa_1 style="enable-background:new 0 0 471.418 471.418"version=1.1 viewBox="0 0 471.418 471.418"width=471.418px x=0px xml:space=preserve xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink y=0px><g><g><polygon points="60.343,0 60.343,471.418 94.343,471.418 94.343,34 423.777,34 423.777,471.418 457.777,471.418 457.777,0"/><g><rect height=400.604 width=149.255 x=104.194 y=43.906 /><rect height=400.604 width=149.254 x=264.672 y=43.906 /></g><path d="M13.641,281.419h36.811v-91.362H13.641V281.419z M32.044,201.635l11.34,19.123h-22.68L32.044,201.635z M43.384,250.718 l-11.34,19.123l-11.34-19.123H43.384z"/></g></g></svg>
+				</div>
+				<div class="elevator">
+					<svg height=471.418px id=Capa_1 style="enable-background:new 0 0 471.418 471.418"version=1.1 viewBox="0 0 471.418 471.418"width=471.418px x=0px xml:space=preserve xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink y=0px><g><g><polygon points="60.343,0 60.343,471.418 94.343,471.418 94.343,34 423.777,34 423.777,471.418 457.777,471.418 457.777,0"/><g><rect height=400.604 width=149.255 x=104.194 y=43.906 /><rect height=400.604 width=149.254 x=264.672 y=43.906 /></g><path d="M13.641,281.419h36.811v-91.362H13.641V281.419z M32.044,201.635l11.34,19.123h-22.68L32.044,201.635z M43.384,250.718 l-11.34,19.123l-11.34-19.123H43.384z"/></g></g></svg>
+				</div>
+			</div>
+
+			<ul id="floor-list">
+				<!--
+				<li class="floor">10F</li>
+				<li class="floor">10F</li>
+				-->	
+			</ul>
+		</div>
+
+		<div id="inside-pannels">
+			<!--
+					<ul class="inside-pannel">
+						<li class="pannel-buttons"><button class="pannel-button">1</button></li>
+						<li class="pannel-buttons"><button class="pannel-button">2</button></li>
+						<li class="pannel-buttons"><button class="pannel-button">3</button></li>
+						<li class="pannel-buttons"><button class="pannel-button">4</button></li>
+					</ul>
+			-->
+		</div>
+	</div>
+
+
+	<script src="js/main.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
